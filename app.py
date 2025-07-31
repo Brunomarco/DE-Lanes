@@ -61,6 +61,7 @@ if uploaded_file:
         color_continuous_scale='Blues'
     )
     fig_origin.update_traces(textposition='outside')
+    fig_origin.update_yaxes(range=[0, origin_counts['Frequency'].max() * 1.15])
     fig_origin.update_layout(showlegend=False, height=400)
     st.plotly_chart(fig_origin, use_container_width=True)
 
@@ -81,6 +82,7 @@ if uploaded_file:
         color_continuous_scale='Greens'
     )
     fig_dest.update_traces(textposition='outside')
+    fig_dest.update_yaxes(range=[0, dest_counts['Frequency'].max() * 1.15])
     fig_dest.update_layout(showlegend=False, height=400)
     st.plotly_chart(fig_dest, use_container_width=True)
 
