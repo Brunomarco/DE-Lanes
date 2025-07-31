@@ -19,9 +19,8 @@ if uploaded_file:
     # =========================
     # DATA CLEANING
     # =========================
-    # Ensure proper column names (adjust if different)
-    origin_col = 'Origin Airport'
-    dest_col = 'Destination Airport'
+    origin_col = 'ORIG'
+    dest_col = 'DEST'
     del_time_col = 'DEL TIME'
 
     # Filter rows where DEL TIME is not empty
