@@ -48,6 +48,7 @@ if uploaded_file:
     # ORIGIN ANALYSIS
     # =========================
     st.subheader("Top Origins")
+    st.markdown("<div style='margin-bottom: 15px;'></div>", unsafe_allow_html=True) 
     origin_counts = df[origin_col].value_counts().reset_index()
     origin_counts.columns = ['Origin', 'Frequency']
 
@@ -67,6 +68,7 @@ if uploaded_file:
     # DESTINATION ANALYSIS
     # =========================
     st.subheader("Top Destinations")
+    st.markdown("<div style='margin-bottom: 15px;'></div>", unsafe_allow_html=True)
     dest_counts = df[dest_col].value_counts().reset_index()
     dest_counts.columns = ['Destination', 'Frequency']
 
